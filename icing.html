@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠키를 꾸며요!</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/jscolor.js"></script>
+    <link rel="icon" href="icon.ico">
+</head>
+
+<body id="body">
+    <div id="menu">
+        <img id="pastrybag" src="img/pastrybag.png" alt="">
+        <img id="eraser" src="img/eraser.png" alt="">
+    </div>
+    <div class="main">
+        <div class="maincontent" id="main">
+            <div id="setting">
+                <input id="palette" data-jscolor="{}">
+                <input id="width" type="range">
+            </div>
+            <hr width="100%" color="222222">
+            <div class="start" id="start" href="cookies.html">
+                <canvas id="canvas"></canvas>
+                <img id="cookie" alt="" width="100%">
+            </div>
+            <div id="warn">* 페이지 이동 시 그림이 초기화될 수 있어요.</div>
+            <div id="clear">완료</div>
+        </div>
+    </div>
+    <div id="popup">
+        <div id="next">쿠키가 다 완성되었나요?<br>
+            <p style=" font-size: 9pt; color:rgb(255, 255, 255); font-weight: lighter;">* 완성한 쿠키는 수정할 수 없으니 신중하게 선택하세요!</p>
+            <button id="yes">예</button>
+            <button id="no">아니오</button>
+        </div>
+    </div>
+    <script>
+    </script>
+    <script src="script/paint.js"></script>
+
+</body>
+
+</html>
