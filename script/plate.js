@@ -9,6 +9,7 @@ if (!Kakao.isInitialized()) {
     Kakao.init('3224a262ae689ba1b770ff9375fc24c0');
 }
 
+document.querySelector("body").style.height = window.innerHeight + "px";
 document.getElementById("kakaotalk").addEventListener("click", function sendKakao() {
     // 메시지 공유 함수
     Kakao.Link.sendScrap({

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         alert("세션을 사용할 수 없는 브라우저입니다.");
     }
 });
-
+document.querySelector("body").style.height = window.innerHeight + "px";
 let mode = 0;
 document.getElementById("eraser").onclick = function() {
     console.log("erase");
