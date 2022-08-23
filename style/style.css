@@ -22,7 +22,7 @@ body {
     width: 100vw;
     height: 100vh;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 80px;
     box-sizing: border-box;
     background-color: rgb(227, 192, 147);
     overflow: hidden;
@@ -87,14 +87,15 @@ body {
     font-family: 'RixInooAriDuriR';
     color: rgb(207, 42, 42);
     text-align: center;
-    font-size: 55pt;
+    font-size: 60pt;
     -webkit-text-stroke: 4px rgb(227, 192, 147);
     text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.674);
 }
 
 #open {
     height: auto;
-    bottom: -160px;
+    position: absolute;
+    bottom: 150px;
 }
 
 hr {
@@ -112,7 +113,7 @@ hr {
 .maincontent {
     width: 100%;
     height: 100%;
-    padding: 80px;
+    padding: 100px;
     display: flex;
     flex-direction: column;
     box-shadow: 30px 30px 10px rgba(31, 31, 31, 0.674);
@@ -128,7 +129,7 @@ table {
 }
 
 #main {
-    padding: 20px;
+    padding: 40px;
 }
 
 .stitle {
