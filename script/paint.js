@@ -41,6 +41,8 @@ canvas.height = document.getElementById("cookie").offsetWidth;
 let painting = false;
 
 function stopPainting() {
+    console.log('end');
+    ctx.beginPath();
     painting = false;
 }
 
@@ -61,7 +63,6 @@ function Mobile() {
 function onMouseMove(event) {
     var x, y;
     if (Mobile()) {
-        console.log(event.changedTouches[0])
         x = event.changedTouches[0].clientX - canvas.width / 20;
         y = event.changedTouches[0].clientY - document.getElementById("start").getBoundingClientRect().y;
     } else {
@@ -106,10 +107,10 @@ if (canvas) {
     canvas.addEventListener("mousedown", startPainting);
     canvas.addEventListener("mouseup", stopPainting);
     canvas.addEventListener("mouseleave", stopPainting);
+
     canvas.addEventListener("touchstart", startPainting);
     canvas.addEventListener("touchmove", onMouseMove);
     canvas.addEventListener("touchend", stopPainting);
-    canvas.addEventListener("touchcancel", stopPainting);
 }
 
 jscolor.presets.default = {
