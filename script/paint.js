@@ -61,13 +61,13 @@ function Mobile() {
 }
 
 function onMouseMove(event) {
-    var x, y;
+    var x, y, xx, yy;
     if (Mobile()) {
         x = event.changedTouches[0].clientX - canvas.width / 20;
         y = event.changedTouches[0].clientY - document.getElementById("start").getBoundingClientRect().y;
     } else {
-        x = event.offsetX;
-        y = event.offsetY;
+        xx = event.offsetX;
+        yy = event.offsetY;
     }
     console.log(x, y)
     ctx.strokeStyle = INITIAL_COLOR;
@@ -79,14 +79,17 @@ function onMouseMove(event) {
         if (!painting) {
             ctx.beginPath();
             ctx.moveTo(x, y);
+            ctx.moveTo(xx, yy);
         } else {
             ctx.lineTo(x, y);
+            ctx.lineTo(xx, yy);
             ctx.stroke();
         }
     } else if (mode === 1) {
         if (painting) {
             console.log(x - ctx.lineWidth, y - ctx.lineWidth, ctx.lineWidth, ctx.lineWidth);
             ctx.clearRect(x - ctx.lineWidth / 2, y - ctx.lineWidth / 2, ctx.lineWidth, ctx.lineWidth);
+            ctx.clearRect(xx - ctx.lineWidth / 2, yy - ctx.lineWidth / 2, ctx.lineWidth, ctx.lineWidth);
         }
     }
 }
